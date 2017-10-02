@@ -9,7 +9,8 @@ profileImage.src = 'https://cdn.shopify.com/s/files/1/0715/2011/products/1_04051
 2. Use the same approach to select the element that contains the photo of the sky and change the src attribute to another picture URL of your choosing.
 
 ANSWER:
-
+cloudImage = document.querySelector('.portfolio-image > img')
+cloudImage.src = 'https://i.pinimg.com/736x/06/34/43/063443a1daf229d5326c61b4c9ec1ad5--good-morning-america-goats.jpg'
 
 *********---------*********
 3. Select the heading that says "Panda the Bear" and change it to your own name.

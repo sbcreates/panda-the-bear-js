@@ -16,75 +16,87 @@ cloudImage.src = 'https://i.pinimg.com/736x/06/34/43/063443a1daf229d5326c61b4c9e
 3. Select the heading that says "Panda the Bear" and change it to your own name.
 
 ANSWER:
-
+nameHead = document.querySelector('h1.highlight')
+nameHead.innerText = "Sarah The Costa"
 
 *********---------*********
 4. Select the heading that says "Employment" and change it to something else. (hint: use a descendant selector)
 
 ANSWER:
-
+titleInfo = document.querySelector('#employment > h3')
+titleInfo.innerText = "Experience"
 
 *********---------*********
 5. Change the colour of the body.
 
 ANSWER:
-
+pageBackground = document.querySelector('body')
+pageBackground.style.backgroundColor = '#1B4F72'
 
 *********---------*********
 6. Change the colour of each element using the highlight class. Use a for loop to do this.
 
 ANSWER:
-
+highLight = document.querySelectorAll('.highlight')
+highLight.forEach(function(element){element.style.backgroundColor = '#979A9A'})
 
 *********---------*********
 7. Change the font family of the h1 to 'monospace'.
 
 ANSWER:
-
+nameHead.style.fontFamily = 'monospace'
 
 *********---------*********
 8. Find a way to select the round icons in the sidebar and then change their colour.
 
 ANSWER:
-
+iconBackground = document.querySelectorAll('a.action-icon-bg')
+iconBackground.forEach(function(element){element.style.backgroundColor = '#1B4F72'})
 
 *********---------*********
 9. Scroll down to the contact form. Change the placeholder attribute of the name field to "identify yourself".
 
 ANSWER:
-
+contactName = document.querySelector('#name')
+contactName.placeholder = "Identify Yourself"
 
 *********---------*********
 10. Change the placeholder attribute of the message field to "state your business".
 
 ANSWER:
-
+contactMsg = document.querySelector('#message')
+contactMsg.placeholder = "State Your Business"
 
 *********---------*********
 11. Give the name field a "value" attribute of "your nemesis".
 
 ANSWER:
-
+contactName.value = "Your Nemesis"
 
 *********---------*********
 12. Change the value attribute of the email field to "koalathebear@gmail.com".
 
 ANSWER:
-
+contactEmail = document.querySelector('#email')
+contactEmail.value = 'koalathebear@gmail.com'
 
 *********---------*********
 13. Change the value of the submit button on the contact form to "En garde!".
 
 ANSWER:
-
+submitButton = document.querySelector('#submit')
+submitButton.value = 'En garde!'
 
 *********---------*********
 14. We should stop Koala from sending an email to Panda that they might regret! Find a way to disable the submit button (hint: familiarize yourself with the disabled attribute).
 
 ANSWER:
-
+submitButton.disabled = true
 
 *********---------*********
 15. We should help Panda protect their privacy by erasing their personal details from the sidebar.
 
 ANSWER:
+bioInfo = document.querySelector('.bio-info')
+bioInfoList = document.querySelectorAll('.bio-info-item')
+bioInfoList.forEach(function(element){bioInfo.removeChild(element)})

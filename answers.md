@@ -100,3 +100,36 @@ ANSWER:
 bioInfo = document.querySelector('.bio-info')
 bioInfoList = document.querySelectorAll('.bio-info-item')
 bioInfoList.forEach(function(element){bioInfo.removeChild(element)})
+
+
+
+PART 2 ***********************
+1. That drawing of Pikachu is really cute. Let’s duplicate it using cloneNode() and insert it at the bottom of the .portfolio-container using insertAdjacentHTML() or appendChild().
+
+ANSWER:
+var pikachu = document.querySelector('#right-image > img')
+pikachu.cloneNode(true);
+var portfolioContainer = document.querySelector('.portfolio-container')
+portfolioContainer.append(pikaClone)
+
+*********---------*********
+2. Wow, that was so satisfying I think we should do it 10 more times. Use a for loop to help you do this.
+
+ANSWER:
+for(var i = 0; i < 10; i++){ var pikaClone = pikachu.cloneNode(true); portfolioContainer.append(pikaClone) };
+
+*********---------*********
+3. Let’s add a message about when the page was last updated. We'll do this by appending a new <li> element to the <ul> in the sidebar (you might need to refresh the page to bring back the list items that we emptied out earlier).
+
+ANSWER:
+var newItem = document.createElement('li')
+var lastUpdated = document.lastModified
+var spanOne = document.createElement('span')
+var spanTwo = document.createElement('span')
+spanOne.className = 'bio-info-title'
+spanTwo.className = 'bio-info-value'
+newItem.append(spanOne)
+newItem.append(spanTwo)
+spanOne.innerText = "Last Updated"
+spanTwo.innerText = lastUpdated
+bioInfo.append(newItem)
